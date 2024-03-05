@@ -53,8 +53,10 @@ function Xisobchi(qiymat , x){
   }
 
   if(x > 0){
+    if(qiymat > 0){
       maslen.push(Massive.join(' '));
       maslen.push(Arrays[2][x]);
+    }
   }else{
     maslen.push(Massive.join(' '));
   }
