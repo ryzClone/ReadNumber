@@ -23,7 +23,6 @@ var chunks = [];
 
 function Xisobchi(qiymat , x){
   let o = 0;
-
   if(qiymat.length === 3){
     Massive = []
     if(qiymat > 0){
@@ -54,10 +53,10 @@ function Xisobchi(qiymat , x){
   }
 
   if(x > 0){
-      maslen.push(Massive.join(', '));
-      maslen.push(Arrays[2][x].join(', '));
+      maslen.push(Massive.join(' '));
+      maslen.push(Arrays[2][x]);
   }else{
-    maslen.push(Massive.join(', '));
+    maslen.push(Massive.join(' '));
   }
 }
 
@@ -90,8 +89,14 @@ function MyFunction (x, value ) {
 
     for (let i = 0; i < chunks.length; i++) {
       r++;
-      maslen.push(Xisobchi(chunks[i], length - r));
-      document.getElementById('demo').innerText = maslen.join(', ');
+      maslen.push(Xisobchi(chunks[i], chunks.length - r));
+      console.log(maslen);
+      // document.getElementById('demo').innerHTML = maslen.join(', ');
+
+      let result = maslen.filter(item => typeof item === 'string' && item !== ',').join(' ');
+      console.log(result);
+      document.getElementById('demo').innerHTML = result;
+
     }
 
     return chunks;
