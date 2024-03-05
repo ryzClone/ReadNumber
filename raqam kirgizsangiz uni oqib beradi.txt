@@ -1,0 +1,2 @@
+Bu funcsiya nomer kirgizganda uni text ko'rinishida yozib beradi yani :
+    999 kirgizilsa to'qqizyuz to'qson to'qqiz deb yozadi 
